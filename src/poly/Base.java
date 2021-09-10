@@ -1,7 +1,11 @@
 package poly;
 
+/**
+ * This is base class
+ * @author ashish
+ */
 public class Base {
-	int age;
+	int age; // this is to store age
 
 	public void area() {
 		System.out.println("area of Base");
