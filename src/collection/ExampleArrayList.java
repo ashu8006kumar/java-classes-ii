@@ -32,6 +32,8 @@ public class ExampleArrayList {
 		for (String string : l) {
 			System.out.println(string);
 		}
+		
+		//l.stream().forEach(System.out::println);
 
 	}
 }
