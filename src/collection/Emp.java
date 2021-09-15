@@ -36,9 +36,14 @@ public class Emp {
 		this.email = email;
 	}
 
+	 
+
 	@Override
-	public int hashCode() { 
-		return 31;
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		return result;
 	}
 
 	@Override
@@ -50,17 +55,12 @@ public class Emp {
 		if (getClass() != obj.getClass())
 			return false;
 		Emp other = (Emp) obj;
-		if (email == null) {// email is null
-			// if other email is null return true else return false;
-			return other.email == null;
-		} else {
-			// email is not null
-			if (other.email == null) {
+		if (email == null) {
+			if (other.email != null)
 				return false;
-			} else {
-				return email.equals(other.getEmail());
-			}
-		}
+		} else if (!email.equals(other.email))
+			return false;
+		return true;
 	}
 
 	@Override
